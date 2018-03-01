@@ -12,8 +12,12 @@ class menu1:
             print(item+" successfully added to menu\n")
 
     def deleteitem(self, item):
-            self.list1.remove(item)
-            print(item+" successfully removed from menu\n")
+            for i in self.list1:
+                if i == item:
+                    self.list1.remove(item)
+                    print(item+" successfully removed from menu\n")
+                    return ;
+            print("Item not found\n")
 
 n = int(input("How many elements to begin with??"))
 ob = menu1(n)
@@ -32,14 +36,3 @@ while(1):
         print("")
     else:
         break
-class menu1:
-    def __init__(self, n):
-        self.list1=[]
-        for i in range(n):
-            self.list1.append(str(input("Enter item: ")))
-    def getmenu(self):
-        return self.list1
-
-n = int(input("How many elements to begin with??"))
-ob = menu1(n)
-print(ob.getmenu())
