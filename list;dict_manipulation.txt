@@ -1,0 +1,73 @@
+list:
+
+list.append(elem) -- adds a single element to the end of the list. Common error: does not return the new list, just modifies the original.
+
+list.insert(index, elem) -- inserts the element at the given index, shifting elements to the right.
+
+list.extend(list2) adds the elements in list2 to the end of the list. Using + or += on a list is similar to using extend().
+
+list.index(elem) -- searches for the given element from the start of the list and returns its index. 
+Throws a ValueError if the element does not appear (use "in" to check without a ValueError).
+
+list.remove(elem) -- searches for the first instance of the given element and removes it (throws ValueError if not present)
+
+list.sort() -- sorts the list in place (does not return it). (The sorted() function shown below is preferred.)
+
+list.reverse() -- reverses the list in place (does not return it)
+
+list.pop(index) -- removes and returns the element at the given index. 
+Returns the rightmost element if index is omitted (roughly the opposite of append()).
+
+
+dict:
+create an empty dictionary
+x = {}
+
+create a three items dictionary
+x = {"one":1, "two":2, "three":3}
+
+access an element
+x['two']
+
+get a list of all the keys
+x.keys()
+
+get a list of all the values
+x.values()
+
+add an entry
+x["four"]=4
+
+change an entry
+x["one"] = "uno"
+
+delete an entry
+del x["four"]
+
+make a copy
+y = x.copy()
+
+remove all items
+x.clear()
+
+number of items
+z = len(x)
+
+test if has key
+z = x.has_key("one")
+
+looping over keys
+for item in x.keys(): print item
+
+looping over values
+for item in x.values(): print item
+
+using the if statement to get the values
+if "one" in x:
+    print x['one']
+
+if "two" not in x:
+    print "Two not found"
+
+if "three" in x:
+    del x['three']
