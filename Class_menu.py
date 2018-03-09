@@ -7,6 +7,9 @@ class menu1:
     def getmenu(self):
         return self.dict1
 
+    def getitem(self, item):
+        return self.dict1[item]
+
     def additem(self, item):
             self.dict1[item] = int(input("Enter the price: "))
             print(item+" successfully added to menu\n")
@@ -23,7 +26,7 @@ n = int(input("How many elements to begin with??"))
 ob = menu1(n)
 
 while(1):
-    print("Menu:\n1)Add item to menu\n2)Remove element from menu\n3)Show menu\n4)Exit")
+    print("Menu:\n1)Add item to menu\n2)Remove element from menu\n3)Show menu\n4)Get item Price\n5)Exit")
     choice = int(input("\nEnter your choice: "))
 
     if choice==1:
@@ -33,6 +36,9 @@ while(1):
     elif choice==3:
         print("\nThe menu contains:")
         print(ob.getmenu())
+        print("")
+    elif choice==4:
+        print(ob.getitem(str(input("Enter item name: "))))
         print("")
     else:
         break
