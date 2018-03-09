@@ -1,21 +1,20 @@
-
 class menu1:
     def __init__(self, n):
-        self.list1=[]
+        self.dict1={}
         for i in range(n):
-            self.list1.append(str(input("Enter item: ")))
+            self.dict1.update({input("Enter item name: "):int(input("Enter item price: "))})
 
     def getmenu(self):
-        return self.list1
+        return self.dict1
 
     def additem(self, item):
-            self.list1.append(item)
+            self.dict1[item] = int(input("Enter the price: "))
             print(item+" successfully added to menu\n")
 
     def deleteitem(self, item):
-            for i in self.list1:
+            for i in self.dict1:
                 if i == item:
-                    self.list1.remove(item)
+                    del self.dict1[item]
                     print(item+" successfully removed from menu\n")
                     return ;
             print("Item not found\n")
