@@ -1,0 +1,8 @@
+.vscode
+*__pycache__*
+*build*
+Jarvis
+.ipynb_checkpoints
+powerset
+*test*
+*temp*
